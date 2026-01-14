@@ -1,5 +1,6 @@
 html, body {
     color: aliceblue;
+    text-shadow: 1px 0 black;
 }
 
 p {
@@ -9,11 +10,11 @@ p {
 }
 
 .color {
-    color: skyblue;
+    color: greenyellow;
 }
 
 .contrast {
-    color: greenyellow;
+    color: skyblue;
 }
 
 .antiqua {

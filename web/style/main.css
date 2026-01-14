@@ -8,6 +8,7 @@ section#page {
     background-blend-mode: overlay;
     display: grid;
     grid-template-columns: [left] auto [mainleft] auto [main] 1fr [mainright] auto [right] auto [end] 0px;
+    width: 100%;
 }
 
 nav#leftnavbar {
@@ -16,35 +17,60 @@ nav#leftnavbar {
     background-blend-mode: overlay;
     display: grid;
     grid-column: left;
-    width: 20vw;
     height: 100%;
+}
+
+@media screen and (width < 768px) {
+    nav#leftnavbar {
+        width: 8Em;
+        transition: 300ms;
+    }
+
+    nav#leftnavbar div#logo .logo {
+        font-size: 3Em;
+    }
+
+    nav#leftnavbar div#logo .logotext {
+        font-size: 1.5Em;
+    }
+}
+
+@media screen and (width >= 768px) {
+    nav#leftnavbar {
+        width: 16Em;
+    }
+
+    nav#leftnavbar div#logo .logo {
+        font-size: 6Em;
+    }
+
+    nav#leftnavbar div#logo .logotext {
+        font-size: 2Em;
+    }
+}
+
+nav#leftnavbar div#navigation {
+    position: fixed;
+    width: inherit;
+    padding-top: 3.0Em;
+}
+
+nav#leftnavbar div#logo {
+    position: fixed;
+    bottom: 1.0Em;
+    width: inherit;
+}
+
+nav#leftnavbar div#navcontainer {
+    width: inherit;
+    border-bottom: 1px solid aliceblue;
 }
 
 nav#topnavbar {
     display: grid;
     grid-column-start: mainleft;
     grid-column-end: end;
-}
-
-nav#leftnavbar div#navigation {
-    position: fixed;
-    width: 20vw;
-}
-
-nav#leftnavbar div#logo {
-    position: fixed;
-    bottom: 1.0Em;
-    left: 2.0Em;
-    width: 20vw;
-}
-
-nav#leftnavbar div#logo .logo {
-    font-size: 5.0Em;
-}
-
-nav#leftnavbar div#navcontainer {
-    width: 20vw;
-    border-bottom: 1px solid aliceblue;
+    height: max-content;
 }
 
 nav#topnavbar div#navcontainer {
@@ -58,9 +84,20 @@ main#application {
     border-top-left-radius: 0.75Em;
     border-left: 1px solid grey;
     border-top: 1px solid grey;
-    padding: 2.0Em;
-    margin: 1.0Em 0 0 0;
+    margin-top: 1.0Em;
     grid-column-start: mainleft;
     grid-column-end: end;
-    width: calc(80vw - 6.0Em);
+    width: calc(100% - 1px);
+}
+
+main#application article {
+    padding: 2.0Em;
+}
+
+footer {
+    background-color: rgb(66, 66, 66);
+    width: inherit;
+    min-height: 10vh;
+    border-top: 1px solid aliceblue;
+    padding-top: 0.25Em;
 }

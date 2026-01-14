@@ -15,6 +15,10 @@ html, body, main, section, header, article, footer, nav, div, ol, ul, li, h1, h2
     float: right;
 }
 
+.center {
+    text-align: center;
+}
+
 .top {
     top: 0;
 }
