@@ -1,0 +1,4 @@
+div#navcontainer li {
+    margin-left: 0.25Em;
+    border-left: 1px solid green;
+}

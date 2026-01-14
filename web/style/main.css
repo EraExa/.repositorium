@@ -18,46 +18,26 @@ nav#leftnavbar {
     display: grid;
     grid-column: left;
     height: 100%;
+    min-width: 8Em;
+    max-width: 16Em;
+    word-break: break-all;
 }
 
 @media screen and (width < 768px) {
     nav#leftnavbar {
-        width: 8Em;
+        width: 8.0Em;
         transition: 300ms;
-    }
-
-    nav#leftnavbar div#logo .logo {
-        font-size: 3Em;
-    }
-
-    nav#leftnavbar div#logo .logotext {
-        font-size: 1.5Em;
     }
 }
 
 @media screen and (width >= 768px) {
     nav#leftnavbar {
-        width: 16Em;
-    }
-
-    nav#leftnavbar div#logo .logo {
-        font-size: 6Em;
-    }
-
-    nav#leftnavbar div#logo .logotext {
-        font-size: 2Em;
+        width: 16.0Em;
     }
 }
 
 nav#leftnavbar div#navigation {
     position: fixed;
-    width: inherit;
-    padding-top: 3.0Em;
-}
-
-nav#leftnavbar div#logo {
-    position: fixed;
-    bottom: 1.0Em;
     width: inherit;
 }
 
@@ -68,13 +48,32 @@ nav#leftnavbar div#navcontainer {
 
 nav#topnavbar {
     display: grid;
-    grid-column-start: mainleft;
+    grid-column-start: left;
     grid-column-end: end;
+    min-height: 4.0Em;
     height: max-content;
 }
 
-nav#topnavbar div#navcontainer {
+nav#topnavbar div#navigation {
     display: inline-block;
+}
+
+nav#topnavbar div#logo {
+    position: fixed;
+    text-align: left;
+}
+
+nav#topnavbar div#logo .logo {
+    float: left;
+}
+
+nav#topnavbar div#logo .logotext {
+    text-align: center;
+    font-size: 1.5Em;
+    padding-top: 0.45Em;
+}
+
+nav#topnavbar div#navcontainer {
     padding: 0 1.0Em;
 }
 
@@ -100,4 +99,12 @@ footer {
     min-height: 10vh;
     border-top: 1px solid aliceblue;
     padding-top: 0.25Em;
+}
+
+.scrollbox {
+    max-height: 30vh;
+    max-width: 30vw;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(144, 144, 144) rgb(22, 22, 22);
 }

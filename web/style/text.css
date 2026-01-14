@@ -3,18 +3,57 @@ html, body {
     text-shadow: 1px 0 black;
 }
 
-p {
-    padding: 0 1.0Em;
-    text-indent: -0.5Em;
+h1, h2, h3, h4, h5, h6 {
+    padding: 0 0.5Em;
     margin: 0;
+}
+
+p {
+    padding: 0 0.5Em;
+    text-indent: -0.25Em;
+    margin: 0;
+}
+
+a {
+    color: greenyellow;
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+}
+
+a:hover, a.none {
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.color {
+    color: greenyellow;
+}
+
+a.none:hover {
+    color: greenyellow;
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+    text-decoration-thickness: 1px;
+    cursor: pointer;
 }
 
 .color {
     color: greenyellow;
 }
 
-.contrast {
+.secondary {
     color: skyblue;
+}
+
+.contrast {
+    color: yellow;
+}
+
+.white {
+    color: aliceblue;
 }
 
 .antiqua {

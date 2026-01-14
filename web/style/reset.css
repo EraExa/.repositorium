@@ -5,6 +5,12 @@ html, body, main, section, header, article, footer, nav, div, ol, ul, li, h1, h2
     font-family: 'Book Antiqua', 'Times New Roman', 'Courier New', Courier, monospace;
 }
 
+hr {
+    border: none;
+    border-bottom: 1px solid greenyellow;
+    width: 80%;
+}
+
 .left {
     text-align: left;
     float: left;

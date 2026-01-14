@@ -6,48 +6,103 @@
         <link rel="stylesheet" type="text/css" href="./style/reset.css" />
         <link rel="stylesheet" type="text/css" href="./style/main.css" />
         <link rel="stylesheet" type="text/css" href="./style/text.css" />
+        <link rel="stylesheet" type="text/css" href="./style/page.css" />
     </head>
     <body>
         <section id="page">
+            <nav id="topnavbar">
+                <div id="navigation" class="left">
+                    <div id="logo" class="inline center">
+                        <img class="logo" src="./res/logo.png" style="width: 5Em; float: left;">
+                        <h1 class="inline logotext" style="display: inline-block;"><span class="left">Canor<br />Infinitum</span></h1>
+                    </div>
+                    <div class="right">
+                        <br />
+                        <div id="navcontainer" class="inline">
+                            <h1 class="symbol" style="display: none;">&</h1>
+                            <h1 class="text" style="display: block;">Projects</h1>
+                        </div>
+                        <div id="navcontainer" class="inline">
+                            <h1 class="symbol" style="display: none;"><a class="none" onclick="opendir('dead-beef-000f-ffff')">&gt;</a>&lowbar;</h1>
+                            <h1 class="text" style="display: block;">Launch App</h1>
+                        </div>
+                        <div id="navcontainer" class="inline">
+                            <h1 class="symbol" style="display: none;">@</h1>
+                            <h1 class="text" style="display: block;">Users</h1>
+                        </div>
+                        <div id="navcontainer" class="inline">
+                            <h1 class="symbol" style="display: none;">@me</h1>
+                            <h1 class="text" style="display: block;">Profile</h1>
+                        </div>
+                    </div>
+                </div>
+            </nav>
             <nav id="leftnavbar">
                 <div id="navigation">
                     <br />
                     <div id="navcontainer">
-                        <h1>Lorem ipsum</h1>
-                        <p>Lorem ipsum.</p>
+                        <h3><span class="color">project</span>.&ZeroWidthSpace;<span class="contrast">repositorium</span><span class="right"><a class="none" onclick="openproject()">...</a></span></h3>
+                        <div id="project" class="scrollbox" style="display: none;">
+                            <hr />
+                            <p>Project Home</p>
+                            <p>Contributors</p>
+                            <p>Portfolio</p>
+                            <p>Canisters</p>
+                            <p>Deploy</p>
+                            <p>Tokenomics</p>
+                        </div>
                     </div>
                     <br />
                     <div id="navcontainer">
-                        <h1>Lorem ipsum</h1>
-                        <p>Lorem ipsum.</p>
+                        <h3><span class="color">codebase</span>.&ZeroWidthSpace;<span class="contrast">repositorium</span><span class="right"><a class="none" onclick="opencodebase()">...</a></span></h3>
+                        <div id="codebase" class="scrollbox" style="display: none;">
+                            <hr />
+                            <ul>
+                                <li>
+                                    <p class="color">.<span class="white">root</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <ul>
+                                        <li>
+                                            <p class="color">.<span class="white">keyring</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                            <p class="color">.<span class="white">canisters</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                            <p class="color">.<span class="white">projects</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p class="color">.<span class="white">main</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <ul>
+                                        <li>
+                                            <p class="color">.<span class="white">deploy</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                            <p class="color">.<span class="white">tokens</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p class="color">.<span class="white">web</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                </li>
+                                <li>
+                                    <p class="color">.<span class="white">src</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <br />
                     <div id="navcontainer">
-                        <h1>Lorem ipsum</h1>
-                        <p>Lorem ipsum.</p>
-                    </div>
-                    <br />
-                    <div id="logo" class="center">
-                        <span class="color inline antiqua logo">&amp;</span>
-                        <span class="spacing">&nbsp;</span>
-                        <h1 class="inline logotext"><span class="left">Canor<br />Infinitum</span></h1>
-                    </div>
-                </div>
-            </nav>
-            <nav id="topnavbar">
-                <div id="navigation" class="center">
-                    <br />
-                    <div id="navcontainer" class="inline">
-                        <h1 class="symbol" style="display: none;">&</h1>
-                        <h1 class="text" style="display: block;">Projects</h1>
-                    </div>
-                    <div id="navcontainer" class="inline">
-                        <h1 class="symbol" style="display: none;">@</h1>
-                        <h1 class="text" style="display: block;">Users</h1>
-                    </div>
-                    <div id="navcontainer" class="inline">
-                        <h1 class="symbol" style="display: none;">&gt;&lowbar;</h1>
-                        <h1 class="text" style="display: block;">Launch App</h1>
+                        <h3><span class="color">codefi</span>.&ZeroWidthSpace;<span class="contrast">repositorium</span><span class="right"><a class="none" onclick="opencodefi()">...</a></span></h3>
+                        <div id="codefi" class="scrollbox" style="display: none;">
+                            <hr />
+                            <ul>
+                                <li>
+                                    <p class="color">.<span class="white">flow</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p class="color">.<span class="white">action</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p class="color">.<span class="white">maneuvers</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p class="color">.<span class="white">united</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p class="color">.<span class="white">elite</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p class="color">.<span class="white">follower</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p class="color">.<span class="white">ether</span>/<span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
