@@ -11,10 +11,19 @@
     <body>
         <section id="page">
             <nav id="topnavbar">
-                <div id="navigation" class="left">
-                    <div id="logo" class="inline center">
+                <div id="container" class="left">
+                    <div id="logo" class="inline left center">
                         <a class="none" href="./index.html"><img class="logo" src="./res/logo.png" style="width: 5Em; float: left;">
                         <h1 class="inline logotext" style="display: inline-block;"><span class="left">Canor<br />Infinitum</span></h1></a>
+                    </div>
+                    <div class="right" style="margin-right: 5Em;">
+                        <br />
+                        <div id="navcontainer" class="left">
+                            <a class="inline none color mainnavtoggle" title="Main menu"><h1>≡</h1></a>
+                        </div>
+                        <div id="navcontainer" class="left">
+                            <a class="inline none color subnavtoggle" title="Side menu"><h1>●</h1></a>
+                        </div>
                     </div>
                     <div class="right">
                         <br />
@@ -23,8 +32,10 @@
                             <h1 class="text" style="display: block;">Projects</h1>
                         </div>
                         <div id="navcontainer" class="inline">
-                            <a class="none color" href="./application.html"><h1 class="symbol" style="display: none;">&gt;&lowbar;</h1>
-                            <h1 class="text" style="display: block;">Launch App</h1></a>
+                            <a class="none color" href="./application.html">
+                                <h1 class="symbol" style="display: none;">&gt;&lowbar;</h1>
+                                <h1 class="text" style="display: block;">Launch App</h1>
+                            </a>
                         </div>
                         <div id="navcontainer" class="inline">
                             <h1 class="symbol" style="display: none;">@</h1>
@@ -38,77 +49,383 @@
                 </div>
             </nav>
             <nav id="leftnavbar">
-                <div id="navigation" class="scrollbox">
-                    <br />
-                    <div id="navcontainer">
-                        <h3><span class="color">project</span>.&ZeroWidthSpace;<span class="contrast">repositorium</span><span class="right"><a class="none" onclick="openproject()">...</a></span></h3>
-                        <div id="project" class="scrollbox" style="display: none;">
-                            <hr />
-                            <p>Project Home</p>
-                            <p>Contributors</p>
-                            <p>Portfolio</p>
-                            <p>Canisters</p>
-                            <p>Deploy</p>
-                            <p>Tokenomics</p>
-                        </div>
+                <div id="container" class="center">
+                    <div id="welcome" style="display: none;">
+                        <a class="none" href="#">
+                            <img src="./res/biometrics.png" style="width: 7.5Em" />
+                            <h2 class="contrast nobreak">Sign in<br />using<br />Internet Identity.</h2>
+                        </a>
                     </div>
-                    <br />
-                    <div id="navcontainer">
-                        <h3><span class="color">codebase</span>.&ZeroWidthSpace;<span class="contrast">repositorium</span><span class="right"><a class="none" onclick="opencodebase()">...</a></span></h3>
-                        <div id="codebase" class="scrollbox" style="display: none;">
-                            <hr />
+                    <div id="left" class="center" style="display: grid;">
+                        <div id="navigation" class="left">
                             <ul>
                                 <li>
-                                    <p><span class="color">.</span>root<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                    <ul>
-                                        <li>
-                                            <p><span class="color">.</span>keyring<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                            <p><span class="color">.</span>canisters<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                            <p><span class="color">.</span>projects<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                        </li>
-                                    </ul>
+                                    <div id="navcontainer" class="navigation">
+                                        <h3><a class="main" href="./index.html"><span class="color">.</span>follow</a></h3>
+                                        <hr />
+                                        <p><a href="./about.html">The Language</a></p>
+                                        <p><a href="./index.html">Download</a></p>
+                                        <p><a href="./index.html">Documentation</a></p>
+                                        <p><a href="./application.html">Code Editor</a></p>
+                                    </div>
                                 </li>
                                 <li>
-                                    <p><span class="color">.</span>main<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                    <ul>
-                                        <li>
-                                            <p><span class="color">.</span>deploy<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                            <p><span class="color">.</span>tokens<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                        </li>
-                                    </ul>
+                                    <div id="navcontainer" class="navigation">
+                                        <h3><a class="main" href="./index.html"><span class="color">.</span>codefi</a></h3>
+                                        <hr />
+                                        <p><a href="./index.html">Project Workflow</a></p>
+                                        <p><a href="./index.html">Contribute</a></p>
+                                        <p><a href="./index.html">Collaborate</a></p>
+                                        <p><a href="./index.html">Control Panel</a></p>
+                                    </div>
                                 </li>
                                 <li>
-                                    <p><span class="color">.</span>web<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <div id="navcontainer" class="navigation">
+                                        <h3><a class="main" href="./index.html"><span class="color">.</span>repositorium</a></h3>
+                                        <hr />
+                                        <p><a href="./index.html">New Project</a></p>
+                                        <p><a href="./index.html">Browse Projects</a></p>
+                                        <p><a href="./index.html">Clone Project</a></p>
+                                        <p><a href="./index.html">Contributors</a></p>
+                                        <p><a href="./index.html">Bug Hunting</a></p>
+                                        <p><a href="./index.html">Moderation</a></p>
+                                    </div>
                                 </li>
                                 <li>
-                                    <p><span class="color">.</span>src<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <div id="navcontainer" class="navigation">
+                                        <h3><a class="main" href="./index.html"><span class="color">.</span>projects</a></h3>
+                                        <hr />
+                                        <p><a href="./index.html">Project Novus</a></p>
+                                        <p><a href="./index.html">Project Tempus</a></p>
+                                        <p><a href="./index.html">Project Canor</a></p>
+                                        <p><a href="./index.html">Project Aether</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div id="navcontainer" class="navigation">
+                                        <h3><a class="main" href="./index.html"><span class="color">.</span>changemakers</a></h3>
+                                        <hr />
+                                        <p><a href="./index.html">Top Gainers</a></p>
+                                        <p><a href="./index.html">Top Losers</a></p>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <br />
-                    <div id="navcontainer">
-                        <h3><span class="color">codefi</span>.&ZeroWidthSpace;<span class="contrast">repositorium</span><span class="right"><a class="none" onclick="opencodefi()">...</a></span></h3>
-                        <div id="codefi" class="scrollbox" style="display: none;">
-                            <hr />
-                            <ul>
-                                <li>
-                                    <p><span class="color">.</span>flow<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                    <p><span class="color">.</span>action<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                    <p><span class="color">.</span>maneuvers<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                    <p><span class="color">.</span>united<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                    <p><span class="color">.</span>elite<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                    <p><span class="color">.</span>follower<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                    <p><span class="color">.</span>ether<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
-                                </li>
-                            </ul>
+                    <div id="breakboard" class="center" style="display: none;">
+                        <div id="navigation" class="left">
+                            <div id="container">
+                                <div id="navigation">
+                                    <h3 class="left contrast inline">Follow</h3>
+                                    <h3 class="right inline"><a class="followtoggle color">...</a></h3>
+                                </div>
+                                <hr />
+                                <div id="navcontainer" class="navigation follownav" style="display: block;">
+                                    <ul>
+                                        <li>
+                                            <div id="selection" class="flows">
+                                                <h3 class="secondary inline"><span class="white">.</span>flows <a class="flownew color">+</a></h3>
+                                                <p class="right inline"><a class="flowtoggle color">...</a></p>
+                                                <div id="selection" class="navigation flownav" style="display: block;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p><a href="./index.html">Quantum</a></p></li>
+                                                        <li><p><a href="./index.html">Immortality</a></p></li>
+                                                        <li><p><a href="./index.html">Strategy</a></p></li>
+                                                        <li><p><a href="./index.html">Willpower</a></p></li>
+                                                        <li><p><a href="./index.html">Personality</a></p></li>
+                                                        <li><p><a href="./index.html">Intuition</a></p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <div id="selection" class="actions">
+                                                <h3 class="secondary inline"><span class="white">.</span>actions <a class="actionnew color">+</a></h3>
+                                                <p class="right inline"><a class="actiontoggle color">...</a></p>
+                                                <div id="selection" class="navigation actionnav" style="display: block;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p><a href="./index.html">Error-Rate</a></p></li>
+                                                        <li><p><a href="./index.html">Update-Rate</a></p></li>
+                                                        <li><p><a href="./index.html">Reality</a></p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <div id="selection" class="manuevers">
+                                                <h3 class="secondary inline"><span class="white">.</span>maneuvers <a class="maneuvernew color">+</a></h3>
+                                                <p class="right inline"><a class="maneuvertoggle color">...</a></p>
+                                                <div id="selection" class="navigation maneuvernav" style="display: block;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p><a href="./index.html">Groundwork Symbols</a></p></li>
+                                                        <li><p><a href="./index.html">Diffeomorphic Basis</a></p></li>
+                                                        <li><p><a href="./index.html">Bicameral Dual Superposition</a></p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <div id="selection" class="united">
+                                                <h3 class="secondary inline"><span class="white">.</span>united <a class="unitednew color">+</a></h3>
+                                                <p class="right inline"><a class="unitedtoggle color">...</a></p>
+                                                <div id="selection" class="navigation unitednav" style="display: block;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p><a href="./index.html">Mind-Body Problem</a></p></li>
+                                                        <li><p><a href="./index.html">Agentic AI</a></p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <div id="selection" class="elite">
+                                                <h3 class="secondary inline"><span class="white">.</span>elite <a class="elitenew color">+</a></h3>
+                                                <p class="right inline"><a class="elitetoggle color">...</a></p>
+                                                <div id="selection" class="navigation elitenav" style="display: block;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p><a href="./index.html">Symbolic Reasoning</a></p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <div id="selection" class="follower">
+                                                <h3 class="secondary inline"><span class="white">.</span>follower <a class="followernew color">+</a></h3>
+                                                <p class="right inline"><a class="followertoggle color">...</a></p>
+                                                <div id="selection" class="navigation followernav" style="display: block;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p><a href="./index.html">Storea</a></p></li>
+                                                        <li><p><a href="./index.html">Eastor</a></p></li>
+                                                        <li><p><a href="./index.html">Oreast</a></p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <div id="selection" class="ether">
+                                                <h3 class="secondary inline"><span class="white">.</span>ether <a class="ethernew color">+</a></h3>
+                                                <p class="right inline"><a class="ethertoggle color">...</a></p>
+                                                <div id="selection" class="navigation ethernav" style="display: block;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p><a href="./index.html">Novus</a></p></li>
+                                                        <li><p><a href="./index.html">Tempus</a></p></li>
+                                                        <li><p><a href="./index.html">Canor</a></p></li>
+                                                        <li><p><a href="./index.html">Aether</a></p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <div id="navigation">
+                                    <h3 class="contrast left inline">FollowDB</h3>
+                                    <h3 class="right inline"><a class="followdbtoggle color">...</a></h3>
+                                </div>
+                                <hr />
+                                <div id="navcontainer" class="followdbnav navigation" style="display: block;">
+                                    <ul>
+                                        <li>
+                                            <div id="selection" class="structures">
+                                                <h3 class="secondary inline"><span class="white">.</span>structures</h3>
+                                                <p class="right inline"><a class="structurestoggle color">...</a></p>
+                                                <div id="selection" class="structuresnav navigation" style="display: none;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <div id="selection" class="numbers">
+                                                <h3 class="secondary inline"><span class="white">.</span>numbers</h3>
+                                                <p class="right inline"><a class="numberstoggle color">...</a></p>
+                                                <div id="selection" class="numbersnav navigation" style="display: none;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <div id="selection" class="tensors">
+                                                <h3 class="secondary inline"><span class="white">.</span>tensors</h3>
+                                                <p class="right inline"><a class="tensorstoggle color">...</a></p>
+                                                <div id="selection" class="tensorsnav navigation" style="display: none;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <div id="selection" class="objects">
+                                                <h3 class="secondary inline"><span class="white">.</span>objects</h3>
+                                                <p class="right inline"><a class="objectstoggle color">...</a></p>
+                                                <div id="selection" class="objectsnav navigation" style="display: none;">
+                                                    <hr />
+                                                    <ul>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                        <li><p>element-name</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </nav>
             <main id="application">
+                <div id="right">
+                    <div id="navigation">
+                        <br />
+                        <ul>
+                            <li>
+                                <div id="navcontainer" class="navigation">
+                                    <h3><a class="main" href="./index.html"><span class="color">.</span>encyclopædia</a></h3>
+                                    <hr />
+                                    <p><a href="./index.html">Front Page</a></p>
+                                    <p><a href="./index.html">How To</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="navcontainer" class="navigation">
+                                    <h3><a class="main" href="./index.html"><span class="color">.</span>deploy</a></h3>
+                                    <hr />
+                                    <p><a href="./index.html">Asset Management</a></p>
+                                    <p><a href="./index.html">Smart Contracts</a></p>
+                                    <p><a href="./index.html">Task Scheduler</a></p>
+                                    <p><a href="./index.html">Masking Presets</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="navcontainer" class="navigation">
+                                    <h3><a class="main" href="./index.html"><span class="color">.</span>tokens</a></h3>
+                                    <hr />
+                                    <p><a href="./index.html">Asset Management</a></p>
+                                    <p><a href="./index.html">Smart Contracts</a></p>
+                                    <p><a href="./index.html">Task Scheduler</a></p>
+                                    <p><a href="./index.html">Masking Presets</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="navcontainer" class="navigation">
+                                    <h3><a class="main" href="./index.html"><span class="color">.</span>commit</a></h3>
+                                    <hr />
+                                    <p><a href="./index.html">Connect Wallet</a></p>
+                                    <p><a href="./index.html">Sign & Commit</a></p>
+                                    <p><a href="./index.html">Update & Deploy</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <header>
-
+                    <div id="container">
+                        <div id="splash">
+                            <div id="slide" class="slide first" style="display: block;">
+                                <div id="title">
+                                    <h1>Follow™ &mdash; The Follow Programming Language.</h1>
+                                    <p>"&VeryThinSpace;The <span class="color">Follow</span>™ Programming Language and the <span class="color">FollowDB</span>™ Database Project is meant to be an entire repositorium of possible <span class="contrast">Quantum Gravity Computing</span> programs usable in <span class="contrast">Quantum Gravity Communications</span>.<span class="end">&VeryThinSpace;"</span><br />
+                                    <br /><span class="right">&mdash; <span class="color">Canor Infinitum</span>.<br /><a href="./article.html">Read more...</a></span></p>
+                                </div>
+                            </div>
+                            <div id="slide" class="slide second" style="display: none;">
+                                <div id="title">
+                                    <h1><span class="color">Freelance Programming</span> has never been easier.</h1>
+                                    <p>Earn crypto for your pull requests, bug hunting, moderation and general contributions over time, and add crypto to your portfolio for <span class="end"><span class="color">CodeFi</span> &ndash; <span class="contrast">Trading Bot</span> projects.</span><br />
+                                    <span class="right"><a href="./article.html">Read more...</a></span></p>
+                                </div>
+                            </div>
+                            <div id="slide" class="slide third" style="display: none;">
+                                <div id="title">
+                                    <h1>Discover your next gain-algorithmic <span class="contrast">passive income</span> <span class="color">CodeFi</span> <span class="contrast">ecosystem</span>, enabled with ****.</h1>
+                                    <p>Increase your passive income ratios, with the <span class="color">CodeFi</span> ecosystem; powered using a powerful <span class="contrast end">Symbolical Regression Evaluator <span class="color">&</span> Evaluation Engine.</span><br />
+                                    <span class="right"><a href="./article.html">Read more...</a></span></p>
+                                </div>
+                            </div>
+                            <div id="slide" class="slide fourth" style="display: none;">
+                                <br />
+                                <div id="title">
+                                    <h1>Start using the <span class="color">CodeFi</span> <span class="contrast">Trading Bot</span> programme.</h1>
+                                    <p>No need for a complementary codebase, read the extensive <span class="contrast">encyclopædia</span> for a guided process in creating a well-functioning <span class="end">trading-bot.</span><br />
+                                    <span class="right"><a href="./article.html">Read more...</a></span></p>
+                                </div>
+                            </div>
+                            <div id="slide" class="slide fifth" style="display: none;">
+                                <br />
+                                <br />
+                                <br />
+                                <div id="title">
+                                    <h1 class="splash"><span class="contrast">Rebasing</span>&nbsp;<span class="color">→</span> Decentralization.</h1>
+                                    <p class="right"><em>Discover your next <span class="color">CodeFi</span> <span class="end">adventure.</span></em></p>
+                                </div>
+                            </div>
+                            <div id="slide" class="slide sixth" style="display: none;">
+                                <br />
+                                <br />
+                                <br />
+                                <div id="title">
+                                    <h1 class="splash">Onboarding&nbsp;<span class="color">→</span> <span class="contrast">Decentralized</span>.</h1>
+                                    <p class="right"><em>Achieve <span class="color">100%</span> project <span class="end"><span class="contrast">decentralization</span>.</span></em></p>
+                                </div>
+                            </div>
+                            <div id="slide" class="slide seventh" style="display: none;">
+                                <br />
+                                <br />
+                                <br />
+                                <div id="title">
+                                    <h1 class="splash"><span class="color end">project-name</span>&ZeroWidthSpace;.<span class="contrast">repositorium</span>.</h1>
+                                    <p class="right">Enable custom <span class="contrast">domains</span> for your <span class="color end">CodeFi<span class="white">-projects.</span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controller" class="bottom">
+                            <p class="center"><span class="selector selected" onclick="slideshow(0)">•</span>&nbsp;<span class="selector" onclick="slideshow(1)">•</span>&nbsp;<span class="selector" onclick="slideshow(2)">•</span>&nbsp;<span class="selector" onclick="slideshow(3)">•</span>&nbsp;<span class="selector" onclick="slideshow(4)">•</span>&nbsp;<span class="selector" onclick="slideshow(5)">•</span>&nbsp;<span class="selector" onclick="slideshow(6)">•</span></p>
+                        </div>
+                    </div>
                 </header>
                 <section id="application">
                     <article>
