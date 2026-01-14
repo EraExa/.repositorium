@@ -1,103 +1,210 @@
-body {
-    background-color: rgb(48, 48, 48);
+@media (prefers-color-scheme: dark) {
+    body {
+        --bgc           :   var(--darkbgc);
+        --oppositebgc   :   var(--lightbgc);
+        --txc           :   var(--lighttxc);
+        --oppositetxc   :   var(--darktxc);
+        background-color: var(--darkbgc);
+    }
+
+    section#page {
+        background-color: var(--darkbgc);
+    }
+
+    nav#leftnavbar {
+        background-color: var(--darkbgc);
+    }
+
+    main#application {
+        background-color: var(--darkc);
+    }
+
+    footer {
+        background-color: var(--darkc);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        --bgc           :   var(--lightbgc);
+        --oppositebgc   :   var(--darkbgc);
+        --txc           :   var(--darktxc);
+        --oppositetxc   :   var(--lighttxc);
+        background-color: var(--lightbgc);
+    }
+
+    section#page {
+        background-color: var(--lightbgc);
+    }
+
+    nav#leftnavbar {
+        background-color: var(--lightbgc);
+    }
+
+    main#application {
+        background-color: var(--lightc);
+    }
+
+    footer {
+        background-color: var(--lightc);
+    }
 }
 
 section#page {
-    background-color: rgb(48, 48, 48);
     background-image: url("./img/bg.png");
     background-blend-mode: overlay;
     display: grid;
     grid-template-columns: [left] auto [mainleft] auto [main] 1fr [mainright] auto [right] auto [end] 0px;
     width: 100%;
+    min-height: 100vh;
 }
 
 nav#leftnavbar {
-    background-color: rgb(48, 48, 48);
     background-image: url("./img/bg.png");
     background-blend-mode: overlay;
     display: grid;
     grid-column: left;
-    height: 100%;
+    min-width: 8Em;
+    max-width: 16Em;
+    height: 90vh;
+    word-break: break-all;
 }
 
 @media screen and (width < 768px) {
     nav#leftnavbar {
-        width: 8Em;
+        width: 10.0Em;
         transition: 300ms;
-    }
-
-    nav#leftnavbar div#logo .logo {
-        font-size: 3Em;
-    }
-
-    nav#leftnavbar div#logo .logotext {
-        font-size: 1.5Em;
     }
 }
 
 @media screen and (width >= 768px) {
     nav#leftnavbar {
-        width: 16Em;
+        width: 16.0Em;
     }
-
-    nav#leftnavbar div#logo .logo {
-        font-size: 6Em;
-    }
-
-    nav#leftnavbar div#logo .logotext {
-        font-size: 2Em;
-    }
-}
-
-nav#leftnavbar div#navigation {
-    position: fixed;
-    width: inherit;
-    padding-top: 3.0Em;
-}
-
-nav#leftnavbar div#logo {
-    position: fixed;
-    bottom: 1.0Em;
-    width: inherit;
-}
-
-nav#leftnavbar div#navcontainer {
-    width: inherit;
-    border-bottom: 1px solid aliceblue;
 }
 
 nav#topnavbar {
     display: grid;
-    grid-column-start: mainleft;
+    grid-column-start: left;
     grid-column-end: end;
+    min-height: 4.0Em;
     height: max-content;
 }
 
-nav#topnavbar div#navcontainer {
+nav#topnavbar div#container {
     display: inline-block;
+}
+
+nav#topnavbar div#logo {
+    position: relative;
+    text-align: left;
+    left: 1.0Em;
+}
+
+nav#topnavbar div#logo .logo {
+    float: left;
+}
+
+nav#topnavbar div#logo .logotext {
+    text-align: center;
+    font-size: 1.5Em;
+    padding: 0.45Em 0;
+}
+
+nav#topnavbar div#navcontainer {
     padding: 0 1.0Em;
 }
 
 main#application {
     display: grid;
-    background-color: rgba(144, 144, 144, 0.5);
     border-top-left-radius: 0.75Em;
     border-left: 1px solid grey;
     border-top: 1px solid grey;
-    margin-top: 1.0Em;
+    margin-left: 1.0Em;
     grid-column-start: mainleft;
     grid-column-end: end;
-    width: calc(100% - 1px);
+    grid-template-columns: [main] 1fr [right] auto [end] 0px;
+    grid-template-rows: [header] max-content [main] 1fr [end] auto;
+    width: calc(100% - 1.0Em - 2px);
+}
+
+section#application {
+    display: grid;
+    grid-column: main;
+    grid-row: main;
+}
+
+div#navigation div#navcontainer {
+    padding: 1.0Em 0.5Em;
+    margin: 0 0.25Em;
+}
+
+div#navigation div#container {
+    padding: 1.0Em 0.125Em;
+    margin: 0 0.5Em;
+}
+
+div#navcontainer li {
+    padding: 0.125Em 0.5Em;
+}
+
+div#navigation div#navcontainer {
+    background-color: rgb(48, 48, 48);
+    background-image: url("./img/bg.png");
+    background-blend-mode: overlay;
+    border: 1px solid greenyellow;
+    border-radius: 0.75Em;
+    box-shadow: 2px 2px rgba(0, 144, 33, 0.5);
+    scrollbar-width: thin;
+    scrollbar-color: rgb(144, 144, 144) rgba(0, 0, 0, 0.0);
+}
+
+div#navigation div#container {
+    background-color: rgb(144, 144, 144);
+    border: 1px solid green;
+    border-radius: 0.75Em;
+    box-shadow: 2px 2px rgba(0, 144, 33, 0.5);
+}
+
+main#application div#right {
+    display: grid;
+    grid-column-start: right;
+    grid-column-end: end;
+    grid-row-start: header;
+    grid-row-end: end;
+    width: 11.0Em;
+}
+
+main#application header {
+    display: grid;
+    grid-column: main;
+    grid-row: header;
+    padding: 2.0Em;
+    min-height: 10Em;
 }
 
 main#application article {
+    display: grid;
+    grid-column: main;
+    grid-row: main;
     padding: 2.0Em;
+    min-height: 10.0Em;
 }
 
-footer {
-    background-color: rgb(66, 66, 66);
+main#application footer {
+    display: grid;
+    grid-column-start: main;
+    grid-column-end: end;
+    grid-row: bottom;
     width: inherit;
     min-height: 10vh;
-    border-top: 1px solid aliceblue;
+    border-top: 1px solid var(--txc);
     padding-top: 0.25Em;
+}
+
+.scrollbox {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--oppositebgc) var(--bgc);
 }

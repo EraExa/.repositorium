@@ -1,20 +1,109 @@
 html, body {
-    color: aliceblue;
-    text-shadow: 1px 0 black;
+    color: var(--txc);
+    text-shadow: 1px 1px var(--oppositetxc);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0 0.5Em;
+    margin: 0;
 }
 
 p {
-    padding: 0 1.0Em;
-    text-indent: -0.5Em;
+    padding: 0 0.5Em;
+    text-indent: -0.25Em;
     margin: 0;
+}
+
+a {
+    color: greenyellow;
+    text-decoration: underline;
+    text-decoration-color: var(--txc);
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+}
+
+a:hover, a.none {
+    color: var(--txc);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.color {
+    color: greenyellow;
+}
+
+a.none:hover {
+    color: greenyellow;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.secondary {
+    color: darkorange;
+    text-shadow: 1px 1px black;
+    text-decoration: none;
+}
+
+.navigation {
+    scrollbar-color: rgb(22, 22, 22) rgb(144, 144, 144);
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+div#navigation, div#navigation div#container {
+    text-align: center;
+}
+
+div#navigation div#navcontainer {
+    text-align: left;
+}
+
+div#navigation a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+div#navigation a:hover {
+    color: aliceblue;
+    text-shadow: 1px 0 yellowgreen;
+    text-decoration: none;
+}
+
+div#navigation a.main {
+    color: darkseagreen;
+    text-decoration: none;
+}
+
+div#navigation a.main:hover {
+    color: aliceblue;
+    text-shadow: 1px 0 yellowgreen;
+    text-decoration: none;
 }
 
 .color {
     color: greenyellow;
+    text-shadow: 1px 1px var(--darktxc);
+}
+
+.secondary {
+    color: skyblue;
+    text-shadow: 1px 1px var(--darktxc);
 }
 
 .contrast {
-    color: skyblue;
+    color: hsl(54, 100%, 48%);
+    text-shadow: 1px 1px darkgoldenrod;
+}
+
+.highlight {
+    color: hsl(84, 100%, 36%);
+    text-shadow: 1px 1px green;
+}
+
+.white {
+    color: aliceblue;
 }
 
 .antiqua {

@@ -1,0 +1,40 @@
+#slide {
+    height: 16Em;
+}
+
+#controller {
+    height: 1.0Em;
+    position: relative;
+    bottom: 0;
+}
+
+#controller p {
+    color: grey;
+    opacity: 75%;
+    text-decoration: none;
+}
+
+#controller .selector {
+    cursor: pointer;
+}
+
+#controller .selected {
+    color: whitesmoke;
+    opacity: 100%;
+    text-decoration: none;
+}
+
+.commit {
+    width: 15Em;
+    height: 15Em;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(66, 66, 66);
+    background-image: url("./img/bg.png");
+    background-blend-mode: overlay;
+    border: 1px solid orange;
+    border-radius: 0.75Em;
+    position: fixed;
+    bottom: 1Em;
+    left: 1Em;
+}
