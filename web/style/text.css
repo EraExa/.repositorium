@@ -1,6 +1,6 @@
 html, body {
-    color: aliceblue;
-    text-shadow: 1px 0 black;
+    color: var(--txc);
+    text-shadow: 1px 1px var(--oppositetxc);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,13 +17,13 @@ p {
 a {
     color: greenyellow;
     text-decoration: underline;
-    text-decoration-color: whitesmoke;
+    text-decoration-color: var(--txc);
     text-decoration-thickness: 1px;
     cursor: pointer;
 }
 
 a:hover, a.none {
-    color: whitesmoke;
+    color: var(--txc);
     text-decoration: none;
     cursor: pointer;
 }
@@ -35,21 +35,29 @@ a.color {
 a.none:hover {
     color: greenyellow;
     text-decoration: underline;
-    text-decoration-color: whitesmoke;
+    text-decoration-color: var(--txc);
     text-decoration-thickness: 1px;
     cursor: pointer;
 }
 
 .color {
     color: greenyellow;
+    text-shadow: 1px 1px var(--darktxc);
 }
 
 .secondary {
     color: skyblue;
+    text-shadow: 1px 1px var(--darktxc);
 }
 
 .contrast {
-    color: yellow;
+    color: hsl(54, 100%, 48%);
+    text-shadow: 1px 1px darkgoldenrod;
+}
+
+.highlight {
+    color: hsl(84, 100%, 36%);
+    text-shadow: 1px 1px green;
 }
 
 .white {

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>.repositorium</title>
+        <link rel="stylesheet" type="text/css" href="./style/reset.css" />
+        <link rel="stylesheet" type="text/css" href="./style/main.css" />
+        <link rel="stylesheet" type="text/css" href="./style/text.css" />
+        <link rel="stylesheet" type="text/css" href="./style/page.css" />
+    </head>
+    <body>
+        <section id="page">
+            <nav id="topnavbar">
+                <div id="navigation" class="left">
+                    <div id="logo" class="inline center">
+                        <a class="none" href="./index.html"><img class="logo" src="./res/logo.png" style="width: 5Em; float: left;">
+                        <h1 class="inline logotext" style="display: inline-block;"><span class="left">Canor<br />Infinitum</span></h1></a>
+                    </div>
+                    <div class="right">
+                        <br />
+                        <div id="navcontainer" class="inline">
+                            <h1 class="symbol" style="display: none;">&</h1>
+                            <h1 class="text" style="display: block;">Projects</h1>
+                        </div>
+                        <div id="navcontainer" class="inline">
+                            <a class="none color" href="./application.html"><h1 class="symbol" style="display: none;">&gt;&lowbar;</h1>
+                            <h1 class="text" style="display: block;">Launch App</h1></a>
+                        </div>
+                        <div id="navcontainer" class="inline">
+                            <h1 class="symbol" style="display: none;">@</h1>
+                            <h1 class="text" style="display: block;">Users</h1>
+                        </div>
+                        <div id="navcontainer" class="inline">
+                            <h1 class="symbol" style="display: none;">@me</h1>
+                            <h1 class="text" style="display: block;">Profile</h1>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav id="leftnavbar">
+                <div id="navigation" class="scrollbox">
+                    <br />
+                    <div id="navcontainer">
+                        <h3><span class="color">project</span>.&ZeroWidthSpace;<span class="contrast">repositorium</span><span class="right"><a class="none" onclick="openproject()">...</a></span></h3>
+                        <div id="project" class="scrollbox" style="display: none;">
+                            <hr />
+                            <p>Project Home</p>
+                            <p>Contributors</p>
+                            <p>Portfolio</p>
+                            <p>Canisters</p>
+                            <p>Deploy</p>
+                            <p>Tokenomics</p>
+                        </div>
+                    </div>
+                    <br />
+                    <div id="navcontainer">
+                        <h3><span class="color">codebase</span>.&ZeroWidthSpace;<span class="contrast">repositorium</span><span class="right"><a class="none" onclick="opencodebase()">...</a></span></h3>
+                        <div id="codebase" class="scrollbox" style="display: none;">
+                            <hr />
+                            <ul>
+                                <li>
+                                    <p><span class="color">.</span>root<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <ul>
+                                        <li>
+                                            <p><span class="color">.</span>keyring<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                            <p><span class="color">.</span>canisters<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                            <p><span class="color">.</span>projects<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><span class="color">.</span>main<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <ul>
+                                        <li>
+                                            <p><span class="color">.</span>deploy<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                            <p><span class="color">.</span>tokens<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><span class="color">.</span>web<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                </li>
+                                <li>
+                                    <p><span class="color">.</span>src<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br />
+                    <div id="navcontainer">
+                        <h3><span class="color">codefi</span>.&ZeroWidthSpace;<span class="contrast">repositorium</span><span class="right"><a class="none" onclick="opencodefi()">...</a></span></h3>
+                        <div id="codefi" class="scrollbox" style="display: none;">
+                            <hr />
+                            <ul>
+                                <li>
+                                    <p><span class="color">.</span>flow<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p><span class="color">.</span>action<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p><span class="color">.</span>maneuvers<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p><span class="color">.</span>united<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p><span class="color">.</span>elite<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p><span class="color">.</span>follower<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                    <p><span class="color">.</span>ether<span class="color">&sol;</span><span class="right"><a class="none color" onclick="opendir('dead-beef-000f-ffff')">&gt;</a></span></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <main id="application">
+                <header>
+
+                </header>
+                <section id="application">
+                    <article>
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget maximus nulla. Aliquam id mattis lectus. Pellentesque condimentum nunc vel ante blandit dignissim. Suspendisse pretium orci a placerat placerat. Morbi condimentum, nisi quis tincidunt condimentum, purus enim sollicitudin nisi, vel gravida enim ipsum at purus. Sed suscipit felis eu luctus faucibus. Nulla porta dolor eget ex bibendum imperdiet vitae sit amet neque. Donec at nisl erat. Nullam molestie, lectus eget sollicitudin rhoncus, erat erat placerat orci, eget tincidunt mi lectus in ligula. Aliquam erat volutpat. Nunc sed malesuada est. Morbi bibendum ultrices venenatis. Nam ut massa vel quam luctus porttitor nec sed eros. Nulla porttitor ligula pellentesque dictum vehicula. Maecenas malesuada lorem maximus velit luctus tincidunt. Nulla consectetur ex nec nulla varius cursus.</p>
+                        <p>Vestibulum enim dui, placerat non blandit sit amet, convallis sit amet metus. Suspendisse semper pharetra elit vitae elementum. Ut viverra justo eu sapien volutpat euismod. Cras ut nunc velit. Vestibulum libero nibh, vestibulum non blandit at, laoreet sed nisi. Fusce dictum elit neque, et viverra augue maximus eu. Cras ex velit, bibendum vel condimentum id, vehicula at dui. Vestibulum sed sapien quis nunc placerat condimentum.</p>
+                        <p>Donec accumsan dignissim quam, vitae tincidunt nibh ullamcorper a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam ac justo efficitur, accumsan dui quis, pulvinar neque. Sed eros libero, mattis id dui non, bibendum faucibus nunc. Etiam commodo purus non tellus vestibulum egestas. Pellentesque porttitor neque a sapien bibendum, in gravida velit egestas. Aliquam libero metus, ultrices ac lacus eget, mattis cursus justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur auctor quam in nisi iaculis, ut sollicitudin diam feugiat. Etiam laoreet condimentum nulla, sit amet faucibus magna varius non. Mauris a vulputate ipsum, ac condimentum ipsum. Proin aliquet odio eros, id vehicula neque interdum vel. Mauris rhoncus libero ac tellus sagittis ultricies. Nunc ac risus vitae tellus pellentesque dignissim. Etiam erat enim, tempor at pretium vitae, rhoncus vitae risus.</p>
+                        <p>Vestibulum nunc ex, ultricies consequat ligula et, vestibulum pulvinar quam. Sed vestibulum ex vel ex consequat, sed ultrices ligula malesuada. Vivamus ac ante accumsan, condimentum ex sit amet, tempus erat. Vivamus in rutrum nunc. Nulla maximus porta tincidunt. Curabitur dapibus enim in urna aliquam, vel vestibulum est vestibulum. Ut efficitur justo dui, at auctor nulla pretium ut. Nunc tempor dui odio, interdum sodales lorem consequat et. Phasellus urna ligula, porttitor ac vulputate at, suscipit ac urna. Fusce sodales, dolor ut faucibus condimentum, mi nibh porta erat, sit amet suscipit nulla diam vel diam. Pellentesque nisl augue, tempus et arcu eu, volutpat consequat sem. Quisque mi leo, malesuada sit amet interdum nec, tincidunt sed nunc. Ut pretium quam et est gravida iaculis. Curabitur ultrices massa quam, suscipit varius lorem placerat at. Donec egestas urna sed arcu feugiat, eget sollicitudin nisl convallis. Integer interdum egestas fringilla.</p>
+                        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam in purus id diam pretium fermentum. Donec velit metus, gravida at suscipit vehicula, imperdiet vel magna. Etiam elementum dictum augue, ac rhoncus arcu rutrum at. Ut quis mauris luctus, feugiat leo in, lobortis felis. Duis porttitor sollicitudin nulla in vehicula. Etiam id arcu nisl. Nullam mi augue, rutrum vel tellus ac, posuere congue ante. Pellentesque consequat hendrerit ullamcorper. Aenean rhoncus sed eros eu tempus. Suspendisse quam enim, fringilla vitae dolor at, eleifend ultricies tortor. Duis convallis justo id auctor fringilla. Vestibulum consequat massa vitae purus imperdiet, id iaculis leo gravida. Mauris dapibus libero at enim convallis, eget consectetur ligula finibus.</p>
+                        <p>Praesent metus ipsum, volutpat sed euismod ut, tempor eget erat. Aenean eleifend mattis leo. Praesent ut consectetur sapien, et malesuada sapien. Sed egestas, eros at viverra tincidunt, mauris nisi varius neque, ac aliquam velit sem non tellus. Maecenas non odio finibus, tempus massa non, egestas turpis. Sed aliquam dolor a nunc rutrum tincidunt. Vivamus nec dictum mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur eget molestie est, eu volutpat magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras molestie massa vitae dapibus volutpat. Vivamus porta ipsum in pulvinar ultricies. Integer cursus dapibus est, vel imperdiet eros consequat quis.</p>
+                        <p>Curabitur vel euismod ante, sit amet egestas risus. Donec convallis arcu quis consectetur maximus. Duis euismod est vel sapien bibendum, laoreet facilisis erat sollicitudin. Mauris in iaculis nibh. Proin mollis eu risus a auctor. Aenean quis dapibus ex, eget malesuada massa. Sed gravida semper lacinia. Nunc lacus ipsum, vestibulum eu mattis ac, dictum ultricies sapien. Donec libero magna, pretium nec volutpat et, blandit eu leo. Etiam volutpat semper ligula, quis feugiat dui fermentum at. Integer tincidunt elementum tellus eget tempus. Integer a mollis ipsum, at malesuada ligula. Morbi dictum vulputate dolor. Mauris maximus turpis vitae efficitur mollis. Aenean quis eros pellentesque, tincidunt tellus vitae, efficitur ex. Pellentesque congue pellentesque libero quis commodo.</p>
+                        <p>Morbi fermentum vitae sem vel rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque eu felis nec quam scelerisque commodo eu a sapien. Fusce volutpat in nisi quis commodo. Quisque varius a odio et scelerisque. Cras pellentesque rutrum sem, eget vestibulum nisl viverra ac. Mauris porttitor lacinia sapien, ac pharetra neque aliquam ac. Quisque posuere quis enim ac convallis. Aenean lobortis tincidunt auctor. Vestibulum tristique turpis vitae elit consectetur vehicula. Aenean lacinia id magna ac consequat. Nunc at ultrices nibh. Nam ut pharetra metus, id viverra augue.</p>
+                        <p>Sed dui lorem, porta vel augue eu, molestie tempus mi. Mauris in metus consequat, placerat lacus sed, accumsan ante. Donec hendrerit eu est eget mollis. Etiam bibendum erat nisl, at convallis elit posuere ut. Donec laoreet quam vel volutpat varius. Curabitur in volutpat tortor. Nam eu metus nibh. Proin pellentesque eros eros, in iaculis quam porttitor ut. Maecenas venenatis quam id lectus semper suscipit. Nunc vestibulum eleifend sem, sit amet molestie mauris volutpat non. Proin nibh massa, pellentesque non mollis non, interdum eget turpis. Vivamus massa ligula, sagittis eu ornare ut, fermentum vel sem. In tempor purus sit amet erat tempor bibendum. Vestibulum suscipit justo nec facilisis viverra. Nulla tempus ante vel lorem faucibus, in tempus dolor placerat. Suspendisse potenti.</p>
+                        <p>Etiam semper, ante ac suscipit sodales, nisi metus venenatis eros, id varius felis enim id leo. Quisque ultrices dapibus metus vitae pellentesque. Donec euismod nisi sapien, vel vulputate eros pharetra vel. Aenean eu dictum sapien, nec aliquet tortor. Sed eu purus eu purus ullamcorper lobortis a a mauris. Vestibulum dictum ac diam ac volutpat. Suspendisse in enim nec tortor sodales condimentum imperdiet ut lorem. Quisque sem ex, accumsan eget lacus quis, placerat convallis quam. Donec at urna ut arcu vulputate condimentum sed eget arcu.</p>
+                        <p>Donec vel nibh ut velit mattis faucibus. Suspendisse id suscipit nisl, sit amet ultricies purus. Mauris consectetur nulla nec turpis mattis, eu condimentum magna elementum. Maecenas non urna in est scelerisque convallis. In faucibus risus nibh, quis mollis justo tempus condimentum. Maecenas ultricies dolor ipsum, eu tincidunt purus dictum ut. Vestibulum aliquam bibendum enim, vel consectetur ex imperdiet congue. Suspendisse potenti.</p>
+                        <p>Cras lacus nibh, blandit egestas imperdiet quis, sollicitudin eu ex. Nunc sed accumsan turpis. In non maximus sapien. Fusce vitae urna dictum, sodales dui vitae, ullamcorper eros. Donec venenatis nibh ut risus dignissim ultrices. Integer non tortor vel sem varius facilisis. Vestibulum accumsan nec sapien quis elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ullamcorper lectus molestie euismod elementum. Nulla facilisi. Praesent ac luctus erat.</p>
+                    </article>
+                </section>
+                <footer class="center">
+                    <h1>Copyright &copy; 2026: <span class="color">Canor Infinitum</span>.</h1>
+                </footer>
+            </main>
+        </section>
+        <script src="./res/page.js"></script>
+    </body>
+</html>

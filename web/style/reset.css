@@ -29,6 +29,11 @@ hr {
     top: 0;
 }
 
+.middle {
+    display: flex;
+    align-items: center;
+}
+
 .bottom {
     bottom: 0;
 }
