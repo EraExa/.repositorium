@@ -1,0 +1,28 @@
+html, body, main, section, header, article, footer, nav, div, ol, ul, li, h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Book Antiqua', 'Times New Roman', 'Courier New', Courier, monospace;
+}
+
+.left {
+    text-align: left;
+    float: left;
+}
+
+.right {
+    text-align: right;
+    float: right;
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.inline {
+    display: inline-block;
+}

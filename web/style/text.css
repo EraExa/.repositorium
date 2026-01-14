@@ -1,0 +1,21 @@
+html, body {
+    color: aliceblue;
+}
+
+p {
+    padding: 0 1.0Em;
+    text-indent: -0.5Em;
+    margin: 0;
+}
+
+.color {
+    color: skyblue;
+}
+
+.contrast {
+    color: greenyellow;
+}
+
+.antiqua {
+    font-family: 'Book Antiqua', 'Times New Roman', 'Courier New', Courier, monospace;
+}
