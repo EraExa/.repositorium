@@ -1,18 +1,14 @@
 @media (prefers-color-scheme: dark) {
     body {
-        --bgc           :   var(--darkbgc);
-        --oppositebgc   :   var(--lightbgc);
-        --txc           :   var(--lighttxc);
-        --oppositetxc   :   var(--darktxc);
         background-color: var(--darkbgc);
     }
 
     section#page {
-        background-color: var(--darkbgc);
+        background-color: var(--bgc);
     }
 
     nav#leftnavbar {
-        background-color: var(--darkbgc);
+        background-color: var(--bgc);
     }
 
     main#application {
@@ -26,19 +22,15 @@
 
 @media (prefers-color-scheme: light) {
     body {
-        --bgc           :   var(--lightbgc);
-        --oppositebgc   :   var(--darkbgc);
-        --txc           :   var(--darktxc);
-        --oppositetxc   :   var(--lighttxc);
         background-color: var(--lightbgc);
     }
 
     section#page {
-        background-color: var(--lightbgc);
+        background-color: var(--bgc);
     }
 
     nav#leftnavbar {
-        background-color: var(--lightbgc);
+        background-color: var(--bgc);
     }
 
     main#application {
@@ -56,6 +48,7 @@ section#page {
     display: grid;
     grid-template-columns: [left] auto [mainleft] auto [main] 1fr [mainright] auto [right] auto [end] 0px;
     width: 100%;
+    min-width: 45Em;
     min-height: 100vh;
 }
 
@@ -98,11 +91,12 @@ nav#topnavbar div#container {
 nav#topnavbar div#logo {
     position: relative;
     text-align: left;
-    left: 1.0Em;
 }
 
 nav#topnavbar div#logo .logo {
     float: left;
+    font-size: 4.25Em;
+    text-shadow: 2px 2px var(--txc);
 }
 
 nav#topnavbar div#logo .logotext {
@@ -118,14 +112,15 @@ nav#topnavbar div#navcontainer {
 main#application {
     display: grid;
     border-top-left-radius: 0.75Em;
-    border-left: 1px solid grey;
-    border-top: 1px solid grey;
+    border-left: 1px solid var(--lightc);
+    border-top: 1px solid var(--lightc);
     margin-left: 1.0Em;
     grid-column-start: mainleft;
     grid-column-end: end;
     grid-template-columns: [main] 1fr [right] auto [end] 0px;
     grid-template-rows: [header] max-content [main] 1fr [end] auto;
     width: calc(100% - 1.0Em - 2px);
+    overflow-x: hidden;
 }
 
 section#application {
@@ -134,14 +129,18 @@ section#application {
     grid-row: main;
 }
 
+div#left div#navigation, div#breakboard div#navigation {
+    width: calc(100% - 0.5Em);
+}
+
 div#navigation div#navcontainer {
-    padding: 1.0Em 0.5Em;
-    margin: 0 0.25Em;
+    padding: 1.0Em 0;
+    margin: 0 0.25Em 0.5Em 0.25Em;
 }
 
 div#navigation div#container {
-    padding: 1.0Em 0.125Em;
-    margin: 0 0.5Em;
+    padding: 1.0Em 0;
+    margin: 0 0;
 }
 
 div#navcontainer li {
@@ -152,18 +151,18 @@ div#navigation div#navcontainer {
     background-color: rgb(48, 48, 48);
     background-image: url("./img/bg.png");
     background-blend-mode: overlay;
-    border: 1px solid greenyellow;
+    border: 1px solid var(--palette-con);
     border-radius: 0.75Em;
-    box-shadow: 2px 2px rgba(0, 144, 33, 0.5);
+    box-shadow: 2px 2px var(--palette-sub2);
     scrollbar-width: thin;
     scrollbar-color: rgb(144, 144, 144) rgba(0, 0, 0, 0.0);
 }
 
 div#navigation div#container {
     background-color: rgb(144, 144, 144);
-    border: 1px solid green;
+    border: 1px solid var(--palette-con);
     border-radius: 0.75Em;
-    box-shadow: 2px 2px rgba(0, 144, 33, 0.5);
+    box-shadow: 2px 2px var(--palette-sub2);
 }
 
 main#application div#right {
@@ -180,7 +179,7 @@ main#application header {
     grid-column: main;
     grid-row: header;
     padding: 2.0Em;
-    min-height: 10Em;
+    min-height: 12.5Em;
 }
 
 main#application article {
@@ -196,7 +195,7 @@ main#application footer {
     grid-column-start: main;
     grid-column-end: end;
     grid-row: bottom;
-    width: inherit;
+    width: 100%;
     min-height: 10vh;
     border-top: 1px solid var(--txc);
     padding-top: 0.25Em;

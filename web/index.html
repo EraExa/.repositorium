@@ -3,7 +3,9 @@
 <html>
     <head>
         <title>.repositorium</title>
+        <link rel="preload" as="font" type="font/ttf" href="./res/Dataart-Icon-Font.ttf" crossorigin="anonymous" />
         <link rel="stylesheet" type="text/css" href="./style/reset.css" />
+        <link rel="stylesheet" type="text/css" href="./style/theme.css" />
         <link rel="stylesheet" type="text/css" href="./style/main.css" />
         <link rel="stylesheet" type="text/css" href="./style/text.css" />
         <link rel="stylesheet" type="text/css" href="./style/page.css" />
@@ -13,10 +15,39 @@
             <nav id="topnavbar">
                 <div id="container" class="left">
                     <div id="logo" class="inline left center">
-                        <a class="none" href="./index.html"><img class="logo" src="./res/logo.png" style="width: 5Em; float: left;">
-                        <h1 class="inline logotext" style="display: inline-block;"><span class="left">Canor<br />Infinitum</span></h1></a>
+                        <a class="none" href="./index.html">
+                            <h1 class="highlight logo">&</h1>
+                            <h1 class="inline logotext" style="display: inline-block;"><span class="left">Canor<br />Infinitum</span></h1>
+                        </a>
                     </div>
-                    <div id="buttons" class="left" style="margin-left: 5Em; display: none;">
+                    <div class="right">
+                        <br />
+                        <div id="navcontainer" class="inline">
+                            <a class="none color" href="./index.html" alt="Projects">
+                                <h1 class="symbol" style="display: none;"></h1>
+                                <h1 class="text" style="display: block;">Projects</h1>
+                            </a>
+                        </div>
+                        <div id="navcontainer" class="inline">
+                            <a class="none color" href="./index.html" alt="Application">
+                                <h1 class="symbol" style="display: none;"></h1>
+                                <h1 class="text" style="display: block;">Launch App</h1>
+                            </a>
+                        </div>
+                        <div id="navcontainer" class="inline">
+                            <a class="none color" href="./index.html" alt="Users">
+                                <h1 class="symbol" style="display: none;"></h1>
+                                <h1 class="text" style="display: block;">Users</h1>
+                            </a>
+                        </div>
+                        <div id="navcontainer" class="inline">
+                            <a class="none color" href="./index.html" alt="Profile">
+                                <h1 class="symbol" style="display: none;"></h1>
+                                <h1 class="text" style="display: block;">Profile</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="buttons" class="left" style="display: none;">
                         <br />
                         <div id="navcontainer" class="left">
                             <a class="inline none color mainnavtoggle" title="Main menu"><h1>≡</h1></a>
@@ -25,37 +56,10 @@
                             <a class="inline none color subnavtoggle" title="Side menu"><h1>●</h1></a>
                         </div>
                     </div>
-                    <div class="right">
-                        <br />
-                        <div id="navcontainer" class="inline">
-                            <h1 class="symbol" style="display: none;">&</h1>
-                            <h1 class="text" style="display: block;">Projects</h1>
-                        </div>
-                        <div id="navcontainer" class="inline">
-                            <a class="none color" href="./application.html">
-                                <h1 class="symbol" style="display: none;">&gt;&lowbar;</h1>
-                                <h1 class="text" style="display: block;">Launch App</h1>
-                            </a>
-                        </div>
-                        <div id="navcontainer" class="inline">
-                            <h1 class="symbol" style="display: none;">@</h1>
-                            <h1 class="text" style="display: block;">Users</h1>
-                        </div>
-                        <div id="navcontainer" class="inline">
-                            <h1 class="symbol" style="display: none;">@me</h1>
-                            <h1 class="text" style="display: block;">Profile</h1>
-                        </div>
-                    </div>
                 </div>
             </nav>
             <nav id="leftnavbar">
                 <div id="container" class="center">
-                    <div id="welcome" class="commit" style="display: block;">
-                        <a class="none" href="#">
-                            <img src="./res/biometrics.png" style="width: 7.5Em" />
-                            <h2 class="contrast nobreak">Sign in with<br />Internet Identity.</h2>
-                        </a>
-                    </div>
                     <div id="left" class="center" style="display: none;">
                         <div id="navigation" class="left">
                             <ul>
@@ -66,7 +70,7 @@
                                         <p><a href="./about.html">The Language</a></p>
                                         <p><a href="./index.html">Download</a></p>
                                         <p><a href="./index.html">Documentation</a></p>
-                                        <p><a href="./application.html">Code Editor</a></p>
+                                        <p><a href="./index.html">Code Editor</a></p>
                                     </div>
                                 </li>
                                 <li>
@@ -315,6 +319,12 @@
                             </div>
                         </div>
                     </div>
+                    <div id="welcome" class="commit" style="display: block;">
+                        <a class="none" href="#">
+                            <img src="./res/biometrics.png" style="width: 7.5Em" />
+                            <h2 class="contrast nobreak">Sign in with<br />Internet Identity.</h2>
+                        </a>
+                    </div>
                 </div>
             </nav>
             <main id="application">
@@ -369,29 +379,26 @@
                                 <div id="title">
                                     <h1>Follow™ &mdash; The Follow Programming Language.</h1>
                                     <p>"&VeryThinSpace;The <span class="color">Follow</span>™ Programming Language and the <span class="color">FollowDB</span>™ Database Project is meant to be an entire repositorium of possible <span class="contrast">Quantum Gravity Computing</span> programs usable in <span class="contrast">Quantum Gravity Communications</span>.<span class="end">&VeryThinSpace;"</span><br />
-                                    <br /><span class="right">&mdash; <span class="color">Canor Infinitum</span>.<br /><a href="./article.html">Read more...</a></span></p>
+                                    <br /><span class="right">&mdash; <span class="color">Canor Infinitum</span>.</span></p>
                                 </div>
                             </div>
                             <div id="slide" class="slide second" style="display: none;">
                                 <div id="title">
                                     <h1><span class="color">Freelance Programming</span> has never been easier.</h1>
-                                    <p>Earn crypto for your pull requests, bug hunting, moderation and general contributions over time, and add crypto to your portfolio for <span class="end"><span class="color">CodeFi</span> &ndash; <span class="contrast">Trading Bot</span> projects.</span><br />
-                                    <span class="right"><a href="./article.html">Read more...</a></span></p>
+                                    <p>Earn crypto for your pull requests, bug hunting, moderation and general contributions over time, and add crypto to your portfolio for <span class="end"><span class="color">CodeFi</span> &ndash; <span class="contrast">Trading Bot</span> projects.</span></p>
                                 </div>
                             </div>
                             <div id="slide" class="slide third" style="display: none;">
                                 <div id="title">
                                     <h1>Discover your next gain-algorithmic <span class="contrast">passive income</span> <span class="color">CodeFi</span> <span class="contrast">ecosystem</span>, enabled with ****.</h1>
-                                    <p>Increase your passive income ratios, with the <span class="color">CodeFi</span> ecosystem; powered using a powerful <span class="contrast end">Symbolical Regression Evaluator <span class="color">&</span> Evaluation Engine.</span><br />
-                                    <span class="right"><a href="./article.html">Read more...</a></span></p>
+                                    <p>Increase your passive income ratios, with the <span class="color">CodeFi</span> ecosystem; powered using a powerful <span class="contrast end">Symbolical Regression Evaluator <span class="color">&</span> Evaluation Engine.</span></p>
                                 </div>
                             </div>
                             <div id="slide" class="slide fourth" style="display: none;">
                                 <br />
                                 <div id="title">
                                     <h1>Start using the <span class="color">CodeFi</span> <span class="contrast">Trading Bot</span> programme.</h1>
-                                    <p>No need for a complementary codebase, read the extensive <span class="contrast">encyclopædia</span> for a guided process in creating a well-functioning <span class="end">trading-bot.</span><br />
-                                    <span class="right"><a href="./article.html">Read more...</a></span></p>
+                                    <p>No need for a complementary codebase, read the extensive <span class="contrast">encyclopædia</span> for a guided process in creating a well-functioning <span class="end">trading-bot.</span></p>
                                 </div>
                             </div>
                             <div id="slide" class="slide fifth" style="display: none;">
@@ -418,7 +425,7 @@
                                 <br />
                                 <div id="title">
                                     <h1 class="splash"><span class="color end">project-name</span>&ZeroWidthSpace;.<span class="contrast">repositorium</span>.</h1>
-                                    <p class="right">Enable custom <span class="contrast">domains</span> for your <span class="color end">CodeFi<span class="white">-projects.</span></span></p>
+                                    <p class="right">Enable custom <span class="contrast">domains</span> for your <span class="end"><span class="color">CodeFi</span>-projects</span>.</p>
                                 </div>
                             </div>
                         </div>

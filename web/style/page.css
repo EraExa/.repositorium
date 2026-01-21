@@ -1,9 +1,11 @@
 #slide {
-    height: 16Em;
+    height: max-content;
+    width: auto;
 }
 
 #controller {
-    height: 1.0Em;
+    padding-top: 4.0Em;
+    height: max-content;
     position: relative;
     bottom: 0;
 }
@@ -24,17 +26,30 @@
     text-decoration: none;
 }
 
+@media screen and (width < 768px) {
+    .commit {
+        width: 9Em;
+        height: 18Em;
+    }
+}
+
+@media screen and (width >= 768px) {
+    .commit {
+        width: 15Em;
+        height: 16Em;
+    }
+}
+
 .commit {
-    width: 15Em;
-    height: 15Em;
     margin: auto;
     text-align: center;
     background-color: rgb(66, 66, 66);
     background-image: url("./img/bg.png");
     background-blend-mode: overlay;
-    border: 1px solid orange;
+    border: 1px solid var(--palette-con2);
     border-radius: 0.75Em;
     position: fixed;
     bottom: 1Em;
-    left: 1Em;
+    left: 1.0Em;
+    cursor: pointer;
 }

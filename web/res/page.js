@@ -40,7 +40,7 @@ function topnavbarSymbolsOrText(event) {
         let symbols = topnavbar.getElementsByClassName("symbol");
         let text = topnavbar.getElementsByClassName("text");
         let logo = topnavbar.getElementsByClassName("logo");
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 1248) {
             for (var i = 0; i < symbols.length; i++) {
                 symbols[i].style.display = "block";
             }
@@ -139,14 +139,14 @@ function togglenav(event) {
     if ((mainnav != null) && (breakboard != null)) {
         if (mainnav.style.display != "grid") {
             mainnav.style.display = "grid";
-            mainnav.style.display = "100%";
+            mainnav.style.opacity = "100%";
             breakboard.style.display = "none";
-            breakboard.style.display = "100%";
+            breakboard.style.opacity = "100%";
         } else {
             mainnav.style.display = "none";
-            mainnav.style.display = "100%";
+            mainnav.style.opacity = "100%";
             breakboard.style.display = "grid";
-            breakboard.style.display = "100%";
+            breakboard.style.opacity = "100%";
         };
     };
 };
@@ -356,7 +356,7 @@ function sparse(idx) {
         if (idx % 4 == 1) { return "second"; };
         if (idx % 4 == 2) { return "third"; };
         if (idx % 4 == 3) { return "fourth"; };
-    } else if (window.innerWidth > 2304) {
+    } else if (window.innerWidth >= 2304) {
         if (idx % 8 == 0) { return "first"; };
         if (idx % 8 == 1) { return "second"; };
         if (idx % 8 == 2) { return "third"; };

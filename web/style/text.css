@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Dataart-Icon-Font';
+    src: url("../res/Dataart-Icon-Font.ttf") format("truetype");
+}
+
 html, body {
     color: var(--txc);
     text-shadow: 1px 1px var(--oppositetxc);
@@ -8,6 +13,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+h1.symbol {
+    font-family: 'Dataart-Icon-Font';
+}
+
 p {
     padding: 0 0.5Em;
     text-indent: -0.25Em;
@@ -15,7 +24,8 @@ p {
 }
 
 a {
-    color: greenyellow;
+    color: var(--txc);
+    text-shadow: 1px 1px var(--oppositetxc);
     text-decoration: underline;
     text-decoration-color: var(--txc);
     text-decoration-thickness: 1px;
@@ -29,19 +39,40 @@ a:hover, a.none {
 }
 
 a.color {
-    color: greenyellow;
+    color: var(--palette-sub0);
+    text-shadow: 1px 1px var(--oppositetxc);
 }
 
 a.none:hover {
-    color: greenyellow;
+    color: var(--palette-main);
     text-decoration: none;
     cursor: pointer;
 }
 
 a.secondary {
-    color: darkorange;
+    color: var(--palette-con);
     text-shadow: 1px 1px black;
     text-decoration: none;
+}
+
+@media screen and (width < 912px) {
+    nav#leftnavbar {
+        font-size: 76%;
+    }
+
+    div#right {
+        font-size: 76%;
+    }
+}
+
+@media screen and (width >= 912px) {
+    nav#leftnavbar {
+        font-size: 100%;
+    }
+
+    div#right {
+        font-size: 100%;
+    }
 }
 
 .navigation {
@@ -61,49 +92,51 @@ div#navigation div#navcontainer {
 }
 
 div#navigation a {
-    color: aliceblue;
+    color: var(--lighttxc);
+    text-shadow: 1px 1px var(--darktxc);
     text-decoration: none;
 }
 
 div#navigation a:hover {
-    color: aliceblue;
-    text-shadow: 1px 0 yellowgreen;
+    color: var(--palette-con);
+    text-shadow: 1px 1px var(--palette-sub2);
     text-decoration: none;
 }
 
 div#navigation a.main {
-    color: darkseagreen;
+    color: var(--palette-sub0);
+    text-shadow: 1px 1px var(--palette-sub2);
     text-decoration: none;
 }
 
 div#navigation a.main:hover {
-    color: aliceblue;
-    text-shadow: 1px 0 yellowgreen;
+    color: var(--palette-con);
+    text-shadow: 1px 1px var(--palette-sub2);
     text-decoration: none;
 }
 
 .color {
-    color: greenyellow;
-    text-shadow: 1px 1px var(--darktxc);
+    color: var(--palette-main);
+    text-shadow: 1px 0 var(--darktxc);
 }
 
 .secondary {
-    color: skyblue;
-    text-shadow: 1px 1px var(--darktxc);
+    color: var(--palette-sub0);
+    text-shadow: 1px 0 var(--darktxc);
 }
 
 .contrast {
-    color: hsl(54, 100%, 48%);
-    text-shadow: 1px 1px darkgoldenrod;
+    color: var(--palette-sub1);
+    text-shadow: 1px 0 var(--darktxc);
 }
 
 .highlight {
-    color: hsl(84, 100%, 36%);
-    text-shadow: 1px 1px green;
+    color: var(--palette-sub1);
+    text-shadow: 1px 0 var(--darktxc);
 }
 
 .white {
-    color: aliceblue;
+    color: var(--lighttxc);
 }
 
 .antiqua {

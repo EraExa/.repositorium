@@ -1,13 +1,5 @@
-body {
-    --darkbgc   :   rgb(48, 48, 48);
-    --lightbgc  :   rgb(255, 255, 255);
-    --darktxc   :   rgb(22, 22, 22);
-    --lighttxc  :   aliceblue;
-    --darkc     :   rgb(96, 96, 96);
-    --lightc    :   rgba(222, 222, 222, 0.5);
-}
-
 html, body, main, section, header, article, footer, nav, div, ol, ul, li, h1, h2, h3, h4, h5, h6, p {
+    display: block;
     padding: 0;
     margin: 0;
     list-style: none;
